@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Praktikum 6</title>
+<title>Index</title>
 </head>
 <!-- Selle faili abil saab kirjeldada rakenduse üldise layouti -->
 <body>
