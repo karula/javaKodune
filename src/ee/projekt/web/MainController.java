@@ -9,8 +9,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class MainController {
 	
 	@RequestMapping("/")
-	public String main(){			
-			
+	public String main(){	
+	
+		    File lck = new File("/usr/share/tomcat7/i377/Team07/db.lck");
+			lck.delete();		
+
 		return "index";
 	}
 }
