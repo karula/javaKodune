@@ -9,4 +9,5 @@
 	<a href="vahtkond">Vahtkonnad</a><br/>
 	<a href="vahtkondpiiriloigul">Vahtkonnad piirilõikudel</a><br/>
 	<a href="piiriloiguhaldaja">Piirilõikude haldajad</a><br/>
+	<a href="vaeosa">Väeosad</a><br/>
 </pr:main>
