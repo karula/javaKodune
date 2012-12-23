@@ -103,7 +103,7 @@ public class VaeosaController {
 	
 	
 	@RequestMapping(value="/vaeosa", params = "id", method=RequestMethod.GET)
-	public String modifyPiiripunkt(@RequestParam
+	public String openVaeosa(@RequestParam
 			int id, Model model) {
 		
 
@@ -125,6 +125,35 @@ public class VaeosaController {
 		return "vaeosa";
 	}
 	
+	
+	@RequestMapping(value="/vaeosa", method=RequestMethod.POST)
+	public String guardForm(@ModelAttribute @Valid Vaeosa vaeosa, Model model, 
+			HttpServletRequest request) {
+		
+		
+		EntityManagerFactory emf = Persistence.createEntityManagerFactory("projekt");
+		EntityManager em = emf.createEntityManager();
+		
+	
+		Vaeosa osa = em.find(Vaeosa.class, vaeosa.getId());
+		
+		try{
+		      em.getTransaction().begin();
+		      osa.setKommentaar(vaeosa.getKommentaar().toString());
+		      osa.setKood(vaeosa.getKood().toString());
+		      osa.setNimetus(vaeosa.getNimetus().toString());
+		      em.getTransaction().commit();
+		    }
+		    finally{
+		      em.close();
+		      emf.close();
+		    }
+		
+		
+		
+		return "redirect:/vaeosa";
+		
+	}
 	
 	
 	
