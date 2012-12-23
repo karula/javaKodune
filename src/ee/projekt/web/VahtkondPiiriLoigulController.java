@@ -36,16 +36,16 @@ import ee.projekt.entities.VahtkondPiiriloigul;
 
 @Controller
 public class VahtkondPiiriLoigulController {
-	/*
-	@RequestMapping(value="/vahtkond", method=RequestMethod.GET)
+	
+	@RequestMapping(value="/vahtkondpiiriloigul", method=RequestMethod.GET)
 	public String showVahtkond(Model model){
 			
-		ArrayList<Vahtkond> vahtkondlist = selectAllVahtkonds();		
-		model.addAttribute("vklist",vahtkondlist);
+		ArrayList<VahtkondPiiriloigul> vploigullist = selectAllVahtkondPiiriloiguls();		
+		model.addAttribute("vploigullist",vploigullist);
 		
-		return "showvahtkonds";
+		return "showvahtkondpiiriloiguls";
 	}
-	*/
+	
 	@RequestMapping(value="/vahtkondpiiriloigul", params = "id", method=RequestMethod.GET)
 	public String modifyVahtKond(@RequestParam
 			int id, Model model) {
@@ -135,6 +135,19 @@ public class VahtkondPiiriLoigulController {
 		em.getTransaction().begin();
 		
 		ArrayList<Piiriloik> ploik = (ArrayList<Piiriloik>) em.createQuery("SELECT p FROM Piiriloik p").getResultList();
+		
+		em.getTransaction().commit();
+		
+		return ploik;
+	}
+	
+	private ArrayList<VahtkondPiiriloigul> selectAllVahtkondPiiriloiguls() {
+		EntityManagerFactory emf = Persistence.createEntityManagerFactory("projekt");
+		EntityManager em = emf.createEntityManager();
+
+		em.getTransaction().begin();
+		
+		ArrayList<VahtkondPiiriloigul> ploik = (ArrayList<VahtkondPiiriloigul>) em.createQuery("SELECT p FROM VahtkondPiiriloigul p").getResultList();
 		
 		em.getTransaction().commit();
 		

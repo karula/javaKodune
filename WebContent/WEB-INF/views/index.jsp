@@ -7,8 +7,6 @@
 	<a href="piiripunkt">Piiripunktid</a><br/>
 	<a href="piiriloik">Piiriloigud</a><br/>
 	<a href="vahtkond">Vahtkonnad</a><br/>
-	<a href="addvahtkondpiiriloigul">Lisa vahtkond piirilõigul</a><br/>
-	<a href="addpiiriloiguhaldaja">Lisa piirilõigu haldaja</a><br/>
-
-	
+	<a href="vahtkondpiiriloigul">Vahtkonnad piirilõikudel</a><br/>
+	<a href="piiriloiguhaldaja">Piirilõikude haldajad</a><br/>
 </pr:main>

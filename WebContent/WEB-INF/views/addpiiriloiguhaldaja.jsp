@@ -20,7 +20,7 @@
 			<table border="1">
 			<tr>
 			<td>Piirilõik</td>
-			<td>Alates</td>
+			<td>Piiripunkt</td>
 			</tr>
 			<tr>
 			<td>	<select name ="drp_piiriloik">
