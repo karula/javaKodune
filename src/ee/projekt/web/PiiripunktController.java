@@ -122,7 +122,7 @@ public class PiiripunktController {
 	public String cancelPiiripunkt(Model model) {
 		log.debug("Successful piiripunktform request");
 
-		return "redirect:/piiripunktForm";
+		return "redirect:/piiripunkt";
 	}
 	
 	@RequestMapping(value="/deletepiiripunkt", method=RequestMethod.POST)

@@ -6,7 +6,7 @@
 <pr:main>
 	<h2>Vahtkond piirilõigul:</h2>
 	<c:forEach items="${vploigullist}" var="vploigul">
-			Vahtkond: <c:out value="${vploigul.vahtkond.nimetus}"></c:out><a href="vahtkondpiiriloigul?id=<c:out value="${vploigul.id}"></c:out>">VAATA</a><br/>
+			Vahtkond: <c:out value="${vploigul.vahtkond_id.nimetus}"></c:out><a href="vahtkondpiiriloigul?id=<c:out value="${vploigul.id}"></c:out>">VAATA</a><br/>
     </c:forEach>
 	Sisesta uus: <a href="addvahtkondpiiriloigul">LISA</a>
 </pr:main>
