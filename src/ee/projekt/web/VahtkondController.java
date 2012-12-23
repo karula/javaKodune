@@ -99,7 +99,7 @@ public class VahtkondController {
 		insertVahtkond(vahtkond, Integer.parseInt(request.getParameter("drp_vaeosa")),Integer.parseInt(request.getParameter("drp_piiripunkt")));
 		
 		
-		return "redirect:/piiripunktForm";
+		return "redirect:/vahtkond";
 	}
 	
 	@RequestMapping(value="/cancelvahtkond", method=RequestMethod.POST)

@@ -14,6 +14,12 @@ import javax.persistence.*;
 public class Vahtkond implements Serializable {
 
 	@Id
+	@TableGenerator(name="VKOND_SEQ",
+			table="SEQUENCE",
+			pkColumnName="SEQ_NAME",
+			valueColumnName="SEQ_COUNT",
+			allocationSize=1)
+	@GeneratedValue(strategy = GenerationType.TABLE, generator="VKOND_SEQ")
 	private int id;
 	private String kommentaar;
 	private String kood;
