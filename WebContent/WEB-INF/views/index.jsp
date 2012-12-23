@@ -9,6 +9,6 @@
 	<a href="vahtkond">Vahtkonnad</a><br/>
 	<a href="addvahtkondpiiriloigul">Lisa vahtkond piirilõigul</a><br/>
 	<a href="addpiiriloiguhaldaja">Lisa piirilõigu haldaja</a><br/>
-	<a href="removeDB">Kustuta baas</a><br/>
+
 	
 </pr:main>
