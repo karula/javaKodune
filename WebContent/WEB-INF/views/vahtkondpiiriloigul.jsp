@@ -3,6 +3,18 @@
 <%@ taglib tagdir="/WEB-INF/tags" prefix="pr" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+<link rel="stylesheet" href="http://code.jquery.com/ui/1.9.2/themes/base/jquery-ui.css" />
+    <script src="http://code.jquery.com/jquery-1.8.3.js"></script>
+    <script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
+    <link rel="stylesheet" href="/resources/demos/style.css" />
+    <script>
+    $(function() {
+        $( "#datepicker1" ).datepicker();
+    });
+    $(function() {
+        $( "#datepicker2" ).datepicker();
+    });
+    </script>
 <pr:main>
 			<form:form method="POST">
 				<input type="hidden" name="id" value = "${vkploigul.id}">
@@ -21,9 +33,11 @@
 				</c:forEach>
 				</select> <br />
 				<label>Alates</label>
-				<input type="text" name="alates" value = "${vkploigul.alates}" /><br />
+				<!-- <input type="text" name="alates" value = "${vkploigul.alates}" /><br /> -->
+				<input type="text" id="datepicker1" name="alates" value="${vkploigul.alates}"/><br/>
 				<label>Kuni</label>
-				<input type="text" name="kuni" value = "${vkploigul.kuni}"/> <br />
+				<!-- <input type="text" name="kuni" value = "${vkploigul.kuni}"/> <br /> -->
+				 <input type="text" id="datepicker2" name="alates" value="${vkploigul.kuni}"/><br/>
 				<form:errors path="kommentaar"/><br />
 				<input type="submit" value="Salvesta" />
 				<button type="submit" formaction="cancelvahtkondpiiriloigul">Katkesta</button>
